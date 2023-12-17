@@ -13,9 +13,10 @@ const Navbar = ({ title }) => {
       >
         <h1>{title}</h1>
       </Center>
+      <Center>
       <SimpleGrid columns={3}
-      spacing={3}>
-
+      spacing={7}>
+        
         <Button
           colorScheme="teal"
           variant="ghost"
@@ -41,7 +42,9 @@ const Navbar = ({ title }) => {
           Projects
         </Button>
       </SimpleGrid>
+      </Center>
       <CartWidget />
+
     </>
   );
 };
