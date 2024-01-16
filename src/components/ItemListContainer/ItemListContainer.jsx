@@ -1,4 +1,4 @@
-import { Center, SimpleGrid } from '@chakra-ui/react';
+import { Box, Center, SimpleGrid } from '@chakra-ui/react';
 import grinch from '../../assets/grinch.webp';
 import { useEffect, useState } from 'react';
 import { getProducts, getProductByCategory } from '../../asyncMock';
@@ -33,7 +33,11 @@ const ItemListContainer = ({ greeting }) => {
   }, [categoryId]);
 
   return (
-    <div>
+    <Box
+      background="tomato"
+      w="100vw"
+      h="100%"
+    >
       {showGreeting && (
         <Center
           fontFamily={'Sans-serif'}
@@ -63,9 +67,10 @@ const ItemListContainer = ({ greeting }) => {
           </SimpleGrid>
         </Center>
       )}
-
-      <ItemList products={products} />
-    </div>
+      <Box p="10px">
+        <ItemList products={products} />
+      </Box>
+    </Box>
   );
 };
 

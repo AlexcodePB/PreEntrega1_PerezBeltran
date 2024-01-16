@@ -36,6 +36,7 @@ const Navbar = ({ title }) => {
               w="auto"
               fontWeight="bold"
               h="100%"
+              fontSize="1.3em"
             >
               <NavLink to={`/category/trees`}>TREES</NavLink>
             </Button>
@@ -45,6 +46,7 @@ const Navbar = ({ title }) => {
               w="auto"
               fontWeight="bold"
               h="100%"
+              fontSize="1.3em"
             >
               <NavLink to={`/category/garlands`}>GARLANDS</NavLink>
             </Button>
@@ -54,6 +56,7 @@ const Navbar = ({ title }) => {
               w="auto"
               fontWeight="bold"
               h="100%"
+              fontSize="1.3em"
             >
               <NavLink to={`/category/decoration`}>DECORATION</NavLink>
             </Button>

@@ -7,7 +7,7 @@ import { Center } from '@chakra-ui/react';
 const ItemDetailContainer = () => {
   const [product, setProduct] = useState(null);
 
-  const {itemId} = useParams()
+  const { itemId } = useParams();
 
   useEffect(() => {
     getProductById(itemId)
@@ -20,7 +20,7 @@ const ItemDetailContainer = () => {
   }, [itemId]);
 
   return (
-    <Center>
+    <Center background="tomato">
       <ItemDetail {...product} />
     </Center>
   );

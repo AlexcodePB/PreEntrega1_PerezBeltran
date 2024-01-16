@@ -40,3 +40,19 @@
 .read-the-docs {
   color: #888;
 } */
+.bg {
+  background-color: red;
+}
+
+.fondo {
+  font-family: 'Rubik Scribble';
+  background-color: red;
+  color: white;
+  font-weight: bold;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 4em;
+}

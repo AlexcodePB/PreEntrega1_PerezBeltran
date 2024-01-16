@@ -11,46 +11,50 @@ import {
 
 const ItemDetail = ({ id, name, img, category, description, price, stock }) => {
   return (
-
-      <Card maxW='sm'
-      margin='30px 0'
-      borderRadius='lg'
-      >
-        <CardBody
+    <Card
+      maxW="sm"
+      h="780px"
+      margin="30px 0"
+      borderRadius="lg"
+    >
+      <CardBody>
+        <Image
+          boxSize="400px"
+          objectFit="cover"
+          src={img}
+          alt={name}
+          borderRadius="lg"
+          margin="0 auto"
+        />
+        <Stack
+          mt="6"
+          spacing="2"
         >
-          <Image
-            boxSize="400px"
-            objectFit="cover"
-            src={img}
-            alt={name}
-            borderRadius="lg"
-            margin='0 auto'
-          />
-          <Stack
-            mt="6"
-            spacing="3"
+          <Heading
+            size="md"
+            color="teal"
           >
-            <Heading size="md">{name}</Heading>
-            <Text>Categoria: {category}</Text>
-            <Text>Descripción: {description}</Text>
-            <Text
-              color="teal"
-              fontSize="2xl"
-            >
-              ${price}
-            </Text>
-            <Text> stock disponible: {stock}</Text>
-          </Stack>
-        </CardBody>
-        <CardFooter>
-          <ItemCount
-            initial={1}
-            stock={stock}
-            onAdd={(quantity) => console.log('Cantidad Agregada', quantity)}
-          />
-        </CardFooter>
-      </Card>
-
+            {name}
+          </Heading>
+          <Text color="teal">Categoria: {category}</Text>
+          <Text color="teal">Descripción: {description}</Text>
+          <Text
+            color="teal"
+            fontSize="2xl"
+          >
+            ${price}
+          </Text>
+          <Text color="teal"> stock disponible: {stock}</Text>
+        </Stack>
+      </CardBody>
+      <CardFooter mar>
+        <ItemCount
+          initial={1}
+          stock={stock}
+          onAdd={(quantity) => console.log('Cantidad Agregada', quantity)}
+        />
+      </CardFooter>
+    </Card>
   );
 };
 
